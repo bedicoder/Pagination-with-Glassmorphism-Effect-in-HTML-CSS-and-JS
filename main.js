@@ -1,11 +1,13 @@
 /** @format */
+const indicator = document.querySelectorAll(".pagination li");
 
-const pagination = document.querySelectorAll(".pagination li");
-
-pagination.forEach(link => {
+indicator.forEach(link => {
 	link.addEventListener("click", () => {
-		link.classList.add("active");
+		if ((link.contains = "active")) {
+			link.classList.remove("active");
+		} else {
+			link.classList.add("active");
+		}
 		link.previousElementSibling.classList.remove("active");
-		link.nextElementSibling.classList.remove("active");
 	});
 });
