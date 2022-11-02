@@ -1,13 +1,13 @@
 /** @format */
-const indicator = document.querySelectorAll(".pagination li");
+const pagination = document.querySelectorAll(".pagination li");
 
-indicator.forEach(link => {
-	link.addEventListener("click", () => {
-		if ((link.contains = "active")) {
-			link.classList.remove("active");
+pagination.forEach(listItem => {
+	listItem.addEventListener("click", () => {
+		if ((listItem.contains = "active")) {
+			listItem.classList.remove("active");
 		} else {
-			link.classList.add("active");
+			listItem.classList.add("active");
 		}
-		link.previousElementSibling.classList.remove("active");
+		listItem.previousElementSibling.classList.remove("active");
 	});
 });
